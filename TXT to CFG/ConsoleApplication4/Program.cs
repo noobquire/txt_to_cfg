@@ -59,11 +59,6 @@ namespace ConsoleApplication4
 
                 File.WriteAllText(cfgpath, sb.ToString());
 
-                sb.Append("alias w " + quote + "wait 300" + quote + Environment.NewLine);
-
-                File.WriteAllText(cfgpath, sb.ToString());
-
-
                 int linesNumber = inputLines.Count();
 
                 sb.Append("alias " + name + " " + quote);
@@ -73,7 +68,7 @@ namespace ConsoleApplication4
                 int b = 0;
                 do
                 {
-                    string buffer = name + b + "; " + "w" + "; ";
+                    string buffer = name + b + "; " + "wait 300" + "; ";
                     lastLine.Add(buffer);
                     b++;
                 } while (b <= linesNumber && b >= 0);
