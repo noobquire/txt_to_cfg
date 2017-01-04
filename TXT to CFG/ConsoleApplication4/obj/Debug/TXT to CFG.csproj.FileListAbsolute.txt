@@ -3,3 +3,9 @@ C:\Users\master\documents\visual studio 2015\Projects\ConsoleApplication4\Consol
 C:\Users\master\documents\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\master.pdb
 C:\Users\master\documents\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\master.exe
 C:\Users\master\documents\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\master.pdb
+C:\Users\master\Documents\Visual Studio 2015\Projects\TXT to CFG\ConsoleApplication4\bin\Debug\master.exe.config
+C:\Users\master\Documents\Visual Studio 2015\Projects\TXT to CFG\ConsoleApplication4\obj\Debug\master.exe
+C:\Users\master\Documents\Visual Studio 2015\Projects\TXT to CFG\ConsoleApplication4\obj\Debug\master.pdb
+C:\Users\master\Documents\Visual Studio 2015\Projects\TXT to CFG\ConsoleApplication4\bin\Debug\master.exe
+C:\Users\master\Documents\Visual Studio 2015\Projects\TXT to CFG\ConsoleApplication4\bin\Debug\master.pdb
+C:\Users\master\Documents\Visual Studio 2015\Projects\TXT to CFG\ConsoleApplication4\obj\Debug\TXT to CFG.csprojResolveAssemblyReference.cache

@@ -33,8 +33,6 @@ namespace ConsoleApplication4
                 string cfgpath = path + ".cfg";
                 string txtpath = path + ".txt";
 
-
-
                 string name = Path.GetFileNameWithoutExtension(args[0]);
                 System.Text.StringBuilder sb = new System.Text.StringBuilder();
                 StreamReader reader = File.OpenText(txtpath);
@@ -48,50 +46,22 @@ namespace ConsoleApplication4
 
                 File.WriteAllText(cfgpath, sb.ToString());
 
-                int i = 0;
+                int i = 1;
 
                 do
                 {
-                    sb.Append("alias " + name + i + " " + quote + "say " + inputLines[i] + quote + Environment.NewLine);
-                    i++;
+                    sb.Append("alias " + name + i + " " + quote + "say " + inputLines[i] + quote + "; alias " + name + " " + name + ++i + "; wait 300; " + name + quote + Environment.NewLine);
 
-                } while (i < inputLines.Length);
+                } while (i < inputLines.Length-1);
+                sb.Append("alias " + name + i + " " + quote + "say " + inputLines[i] + quote + Environment.NewLine);
 
-                File.WriteAllText(cfgpath, sb.ToString());
 
-                int linesNumber = inputLines.Count();
-
-                sb.Append("alias " + name + " " + quote);
-
-                List<string> lastLine = new List<string>();
-
-                int b = 0;
-                do
-                {
-                    string buffer = name + b + "; " + "wait 300" + "; ";
-                    lastLine.Add(buffer);
-                    b++;
-                } while (b <= linesNumber && b >= 0);
-
-                string lastLineToWrite = String.Join(String.Empty, lastLine.ToArray());
-
-                sb.Append(lastLineToWrite + quote);
+                sb.Append("alias " + name + " " + name + "1" + Environment.NewLine);
 
                 File.WriteAllText(cfgpath, sb.ToString());
 
-                if (lastLineToWrite.Length > 510)
-                {
-                    Console.WriteLine("Oops. The last line length is {0} characters, that is more than 510 characters that one console line may have.", lastLineToWrite.Length);
-                    Console.WriteLine("Try to rename your text file to a shorter name or to remove some lines of the text.");
-                    Console.WriteLine("Press any key to exit...");
-                    File.Delete(cfgpath);
-                    Console.ReadKey();
-                    
-                    return;
-                }
-
-
-
+ 
+                
                 Console.WriteLine("Sucsess!");
                 Console.WriteLine("Output was written to {0}", cfgpath);
                 Console.WriteLine("Press any key to exit...");
