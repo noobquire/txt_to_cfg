@@ -46,17 +46,17 @@ namespace ConsoleApplication4
 
                 File.WriteAllText(cfgpath, sb.ToString());
 
-                int i = 1;
+                int i = 0;
 
                 do
                 {
-                    sb.Append("alias " + name + i + " " + quote + "say " + inputLines[i] + quote + "; alias " + name + " " + name + ++i + "; wait 300; " + name + quote + Environment.NewLine);
+                    sb.Append("alias " + name + i + " " + quote + "say " + inputLines[i] + "; alias " + name + " " + name + ++i + "; wait 300; " + name + quote + Environment.NewLine);
 
                 } while (i < inputLines.Length-1);
-                sb.Append("alias " + name + i + " " + quote + "say " + inputLines[i] + quote + Environment.NewLine);
+                sb.Append("alias " + name + i + " " + quote + "say " + inputLines[i] + "; alias " + name + " " + name + "0" + quote + Environment.NewLine);
 
 
-                sb.Append("alias " + name + " " + name + "1" + Environment.NewLine);
+                sb.Append("alias " + name + " " + name + "0" + Environment.NewLine);
 
                 File.WriteAllText(cfgpath, sb.ToString());
 
